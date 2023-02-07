@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/script.js" type="module"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>JS</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Task 30</h2>
+        <p>
+          Напиши функцію <code>makeTask(data)</code> яка приймає один параметр
+          <code>data</code> - об'єкт з наступними властивостями.
+        </p>
+        <ul>
+          <li><code>text</code> - текст завдання.</li>
+          <li><code>category</code> - категорія завдання.</li>
+          <li><code>priority</code> - пріоритет завдання.</li>
+        </ul>
+        <p>
+          Функція повинна створити і повернути новий об'єкт завдання, не
+          змінюючи напряму параметр <code>data</code>. У новому об'єкті повинна
+          бути властивість <code>completed</code>, значення якої зберігається в
+          однойменній локальній змінній.
+        </p>
+        <p>
+          В параметрі <code>data</code> гарантовано буде тільки властивість
+          <code>text</code>, а інші дві, <code>category</code> і
+          <code>priority</code>, можуть бути відсутніми. Тоді, в новому об'єкті
+          завдання, у властивостях <code>category</code> і
+          <code>priority</code> повинні бути значення за замовчуванням, що
+          зберігаються в однойменних локальних змінних.
+        </p>
+        <h3>Tests</h3>
+        <ul>
+          <li>Оголошена функція <code>makeTask(data)</code></li>
+          <li>
+            Call <code>makeTask({})</code> returns
+            <code
+              >{ category: "General", priority: "Normal", completed: false
+              }</code
+            >
+          </li>
+          <li>
+            Call
+            <code
+              >makeTask({ category: "Homemade", priority: "Low", text: "Take out
+              the trash" })</code
+            >
+            returns
+            <code
+              >{ category: "Homemade", priority: "Low", text: "Take out the
+              trash", completed: false }</code
+            >
+          </li>
+          <li>
+            Call
+            <code
+              >makeTask({ category: "Finance", text: "Take interest" })</code
+            >
+            returns
+            <code
+              >{ category: "Finance", priority: "Normal", text: "Take interest",
+              completed: false }</code
+            >
+          </li>
+          <li>
+            Call
+            <code>makeTask({ priority: "Low", text: "Choose shampoo" })</code>
+            returns
+            <code
+              >{ category: "General", priority: "Low", text: "Choose shampoo",
+              completed: false }</code
+            >
+          </li>
+          <li>
+            Call <code>makeTask({ text: "Buy bread" })</code> returns
+            <code
+              >{ category: "General", priority: "Normal", text: "Buy bread",
+              completed: false }</code
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
